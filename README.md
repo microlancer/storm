@@ -10,7 +10,7 @@ Storm is an open-source node coordination protocol and communication system for 
 
 A trade-off for achieving these features is that in a given Storm, there is a loss of some of the privacy[a] afforded in an independent Lightning Node configuration. In order for proper coordination to occur, some data such as payment flow and channel balances are reported upstream to Storm management ("manager").
 
-A Storm instance (or "group") can be public or private. 
+A Storm instance (or "group", or named "ruleset") can be public or private. 
 
 A private Storm could be used by a single corporation that needs to deploy many nodes. The privacy concerns between these nodes are not relevant since the company has full access to all the nodes anyways. A private Storm could also be a group of "trusted friends" who simply wish to help each other. Again, these friends might otherwise be willing to share private information about payments, liquidity, etc. even if Storm didn't exist in the first place. 
 
@@ -23,7 +23,7 @@ A very common problem is that new lightning nodes have no ability to transfer fu
 
 In order to avoid these issues, Storm uses a messaging protocol that is used for collective coordination and excludes or permits a node into the Storm. 
 
-## The Supercell Storm Instance
+## The "Supercell" Storm (default)
 
 Anyone can create their own public or private storms and each storm has a storm name. Supercell is the default public group that uses the Storm protocol with the following privileges and rule set:
 
