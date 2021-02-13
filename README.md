@@ -80,19 +80,30 @@ The stormd server communicates with lnd[c] over RPC to manage the operation of t
 
 ```
 $ stormcli addfunds 2000000
-Your request to add 2,000,000 sats has been submitted. Be sure your lnd wallet has sufficient funds. The stormd server will automatically create the channels necessary to utilize those funds. To cancel this request, run `stormcli cancel jX78nVt`. To see a list of all requests, run `stormcli getinfo`.
+Your request to add 2,000,000 sats has been submitted. Be sure your 
+lnd wallet has sufficient funds. The stormd server will automatically 
+create the channels necessary to utilize those funds. To cancel this 
+request, run `stormcli cancel jX78nVt`. To see a list of all requests, 
+run `stormcli getinfo`.
 
 
 $ stormcli disconnect
-Your request to disconnect from the group Supercell has been submitted. All funds will be de-allocated. Please wait while liquidity is re-routed around your node. If you disconnect prematurely, you may become banned from the group.
+Your request to disconnect from the group Supercell has been submitted.
+All funds will be de-allocated. Please wait while liquidity is 
+re-routed around your node. If you disconnect prematurely, you may 
+become banned from the group.
 
 
 $ stormcli connect Supercell
-Your request to connect to the group has been submitted. To see the status of your request, run `stormcli getinfo`.
+Your request to connect to the group has been submitted. To see the
+status of your request, run `stormcli getinfo`.
 
 
 $ stormcli removefunds 2000000
-Your request to de-allocate 2,000,000 sats has been submitted. The stormd server will automatically shut down channels and re-route accordingly. To check the status of your de-allocation, run `stormcli getinfo`.
+Your request to de-allocate 2,000,000 sats has been submitted. The 
+stormd server will automatically shut down channels and re-route 
+accordingly. To check the status of your de-allocation, run
+`stormcli getinfo`.
 
 
 $ stormcli getinfo
