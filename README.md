@@ -1,4 +1,4 @@
-# Storm - Node Collective Management Daemon on the Bitcoin Lightning Network
+# Storm - Lightning Node Collectives Protocol
 
 Storm is an open-source node coordination protocol and communication system for the Bitcoin Lightning Network using a directives-based proof-of-stake command-and-control system. Nodes in a particular Storm follow a Storm Protocol which has specific node participation rules, requirements, or constraints for the purposes of the smooth operation of the network. These constraints are designed to ensure:
 
