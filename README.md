@@ -60,21 +60,50 @@ DrBitcoin's FunTime Group (base fee: 3038 fee rate: 0.000032) Flow rate: 33092 t
 
 Running the stormd server performs the actions necessary to participate in the Storm protocol. It also includes a stormcli client to perform requests such as receiving liquidity directives.
 
-A sample stormd.conf file:
+## Sample stormd.conf file
 
 ```
-network=mainnet
-node=lnd
-nodeMacaroon=/home/user/.lnd/admin.macaroon
-nodeRpcPort=3600
-group=Supercell         # Specify which group to connect to
-voteBaseFee=1000        # Your proposed base fee (needs consensus)
-voteFeeRate=0.000001    # Your proposed fee rate (needs consensus)
-logLevel=debug
-logFile=/home/user/.stormd/debug.log
+network = mainnet
+node = lnd
+nodeMacaroon = /home/user/.lnd/admin.macaroon
+nodeRpcPort = 3600
+group = Supercell         # Specify which group to connect to
+voteBaseFee = 1000        # Your proposed base fee (needs consensus)
+voteFeeRate = 0.000001    # Your proposed fee rate (needs consensus)
+logLevel = debug
+logFile = /home/user/.stormd/debug.log
 ```	
 
 The stormd server communicates with lnd[c] over RPC to manage the operation of the node.
+
+## Sample groups.conf file
+
+```
+# Warning! Do NOT modify the Supercell rules manually! Use the upgrade supercell
+# script if you've been instructed to upgrade your node. There may be a limited 
+# time window when both old and new rulesets are valid. If you do not upgrade
+# in sufficient time, you may be removed/banned from the group.
+[Supercell]
+version = 1
+public = true
+monitor_flow = true
+monitor_balances = true
+network_algorithm = default
+fee_voting = true
+fee_vote_weighted = true
+initial_fee_base = 1000
+initial_fee_rate = 0.00001
+ban_time = 14d
+
+[My cool storm]
+version=1
+public = false
+monitor_flow = false
+monitor_balances = false
+network_algorithm = random
+
+```
+
 
 ### Example stormcli commands:
 
