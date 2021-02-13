@@ -134,6 +134,21 @@ $ stormcli getinfo
   ]
 }
 
+$ stormcli publish "My cool storm" 
+A new group named "My cool storm" is now available to peers.
+
+$ stormcli group list
+{
+  "active_groups": [
+    {
+      "name": "Supercell"
+    },
+    {
+      "name": "My cool storm"
+    }
+  ]
+}
+
 
 $ stormcli help
 ```
