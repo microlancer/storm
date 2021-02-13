@@ -93,6 +93,7 @@ fee_voting = true
 fee_vote_weighted = true
 initial_fee_base = 1000
 initial_fee_rate = 0.00001
+allow_external_channels = false
 ban_time = 14d
 
 [My cool storm]
